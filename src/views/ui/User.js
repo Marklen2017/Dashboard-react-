@@ -20,37 +20,37 @@ const User = () => {
               <div>
                 <h3 style={{ color: '#697184' }}>User Lookup</h3>
               </div>
-              <label className="label">created_at
+              <div className="label">created_at
                 <div className="no-flex"><div className="no-check">Yes</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
                 <div className="user-text-check">Date account was created</div>
-              </label>
-              <label className="label-1">description
+              </div>
+              <div className="label-1">description
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Users bio text</p></div>
-              </label>
-              <label className="label-1">entities
+              </div>
+              <div className="label-1">entities
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Details about text in a users description</p></div>
-              </label>
-              <label className="label-1">Location (Long/Lat)
+              </div>
+              <div className="label-1">Location (Long/Lat)
                 <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /></div>
-              </label>
-              <label className="label">profile_image_url
+              </div>
+              <div className="label">profile_image_url
                 <div className="user-no-flex-1"><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
-              </label>
-              <label className="label-1">protected
+              </div>
+              <div className="label-1">protected
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Info if users tweets are private</p></div>
-              </label>
-              <label className="label-1">public_metrics
+              </div>
+              <div className="label-1">public_metrics
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Contains details about activity for this users.</p></div>
-              </label>
-              <label className="label-1">verified
+              </div>
+              <div className="label-1">verified
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Is users verified</p></div>
-              </label>
-              <label className="label-1">pinned_tweet_id
+              </div>
+              <div className="label-1">pinned_tweet_id
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Tweet id of users pinned tweet</p></div>
-              </label>
-              <label className="label-1">url
+              </div>
+              <div className="label-1">url
                 <div style={{ display: 'flex' }} className="user-no-flex"><input style={{ height: '28px' }} className="checkbox-user" type="checkbox" /><p>Users profile URL</p></div>
-              </label>
+              </div>
 
             </div>
             <div className="user-part-right">

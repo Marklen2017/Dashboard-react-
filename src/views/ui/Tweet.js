@@ -16,42 +16,42 @@ const Tweet = (props) => {
                     <li>Text</li>
                 </div>
                 <div className="tweet-checkbox-flex">
-                    <label className="label">author_id
+                    <div className="label">author_id
                         <div className="tweet1-no-flex"><div className="no-check">No</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
                         <div className="text-check">Default is to Request All of these.<br /> Check ‘No’ to not  request this object</div>
-                    </label>
-                    <label className="label-1">conversation_id
+                    </div>
+                    <div className="label-1">conversation_id
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">entities
+                    </div>
+                    <div className="label-1">entities
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">context_annotation
+                    </div>
+                    <div className="label-1">context_annotation
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label">attachments
+                    </div>
+                    <div className="label">attachments
                         <div className="tweet-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
                         <div className="tweet-text-check">Requires user context authentication?</div>
 
-                    </label>
-                    <label className="label-1">referenced_tweets
+                    </div>
+                    <div className="label-1">referenced_tweets
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">public_metrics
+                    </div>
+                    <div className="label-1">public_metrics
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">organic_metrics
+                    </div>
+                    <div className="label-1">organic_metrics
                         <div className="tweet-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">geo
+                    </div>
+                    <div className="label-1">geo
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">source
+                    </div>
+                    <div className="label-1">source
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
-                    <label className="label-1">created_at
+                    </div>
+                    <div className="label-1">created_at
                         <div className="tweet1-no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                    </label>
+                    </div>
                 </div>
             </div>
             <br />

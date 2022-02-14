@@ -12,24 +12,24 @@ const Media = (props) => {
                         <h3>Media.fields</h3>
                     </div>
                     <div className="media-checkbox-flex">
-                        <label style={{ padding: '12px 0px' }} className="label">tipe
+                        <div style={{ padding: '12px 0px' }} className="label">tipe
                             <div className="media-no-flex"><div className="no-check">Request</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">preview_image_url
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">preview_image_url
                             <div className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">url
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">url
                             <div style={{ margin: '0px 174px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">duration_ms
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">duration_ms
                             <div style={{ margin: '0px 69px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">public_metrics
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">public_metrics
                             <div style={{ margin: '0px 47px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">alt_text
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">alt_text
                             <div style={{ margin: '0px 122px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
+                        </div>
                     </div>
                     <div style={{ fontSize: '24px', color: '#697184', padding: '44px 0px 0px 0px' }}>
                         <p>Default Objects:</p>
@@ -45,21 +45,21 @@ const Media = (props) => {
                         <h3>Place.fields</h3>
                     </div>
                     <div className="media-checkbox-flex">
-                        <label style={{ padding: '12px 0px' }} className="label">country
+                        <div style={{ padding: '12px 0px' }} className="label">country
                             <div className="media-no-flex"><div className="no-check">Request</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">country_code
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">country_code
                             <div style={{ margin: '0px 10px 0px 100px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">geo
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">geo
                             <div style={{ margin: '0px 10px 0px 203px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">name
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">name
                             <div style={{ margin: '0px 10px 0px 184px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
-                        <label style={{ padding: '12px 0px' }} className="label">place_type
+                        </div>
+                        <div style={{ padding: '12px 0px' }} className="label">place_type
                             <div style={{ margin: '0px 10px 0px 127px' }} className="media-no-flex-1"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-                        </label>
+                        </div>
                     
                     </div>
                     <div style={{ fontSize: '24px', color: '#697184', padding: '104px 0px 0px 0px' }}>

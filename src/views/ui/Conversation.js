@@ -16,43 +16,43 @@ const Conversation = () => {
             <Input className="input-search" label="text" inputStyle="box" labelStyle="floating" />
           </div>
           <div className="checkbox-flex">
-            <label className="label">author_id
+            <div className="label">author_id
               <div className="no-flex"><div className="no-check">No</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
               <div className="text-check">Default is to Request All of these. <br /> Check ‘No’ to not request this <br /> object</div>
-            </label>
-            <label className="label-1">conversation_id
+            </div>
+            <div className="label-1">conversation_id
               <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-            </label>
-            <label className="label-1">created_at
+            </div>
+            <div className="label-1">created_at
               <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-            </label>
-            <label className="label-1">in_reply_to_user_id
+            </div>
+            <div className="label-1">in_reply_to_user_id
               <div style={{ width: '100%', maxWidth: '500px', height: '1px', backgroundColor: '#697184' }}></div>
               <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-            </label>
-            <label className="label">author_id
+            </div>
+            <div className="label">author_id
               <div className="no-flex-1"><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
               <div className="text-check">Doubt these work for this query <br /> type - but worth testing</div>
-            </label>
-            <label className="label-1">context_annotation
+            </div>
+            <div className="label-1">context_annotation
               <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-            </label>
-            <label className="label-1">attachments
+            </div>
+            <div className="label-1">attachments
               <div className="no-flex"><input style={{ height: '28px' }} className="checkbox-2" type="checkbox" /></div>
-            </label>
+            </div>
           </div>
 
         </div>
 
       </div>
       <div className="part-right">
-        <label style={{ fontSize: '24px', color: '#697184' }} className="label-2">is:retweet
+        <div style={{ fontSize: '24px', color: '#697184' }} className="label-2">is:retweet
           <div className="right-flex"><div className="no-check">Exclude</div><input style={{ height: '28px' }} className="checkbox-3" type="checkbox" /></div>
 
-        </label>
-        <label style={{ padding: '26px 0 20px 0px', fontSize: '24px', color: '#697184' }} className="label-2" >is:quote
+        </div>
+        <div style={{ padding: '26px 0 20px 0px', fontSize: '24px', color: '#697184' }} className="label-2" >is:quote
           <div style={{  padding: '0px 0px 0px 44px' }} className="right-flex-1"><input style={{ height: '28px' }} className="checkbox-4" type="checkbox" /></div>
-        </label>
+        </div>
       </div>
     </div>
   );

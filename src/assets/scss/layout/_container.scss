@@ -210,6 +210,16 @@ input {
   display: flex;
   flex-wrap: wrap;
 }
+@media (min-width: 1400px) {
+  .container-xxl, 
+  .container-xl, 
+  .container-lg, 
+  .container-md, 
+  .container-sm, 
+  .container {
+      max-width: 1679px!important;
+  }
+}
 .part-right {
   width: 100%;
   max-width: 325px;
@@ -431,7 +441,7 @@ input {
 
 
 .wrapper {
-  max-width: 1300px;
+  // max-width: 1300px;
   margin: 0 auto;
 }
 .card {
