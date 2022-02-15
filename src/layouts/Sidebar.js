@@ -48,8 +48,9 @@ const Sidebar = () => {
                 to={navi.href}
                 className={
                   location.pathname === navi.href
-                    ? "text-primary nav-link py-3"
+                    ? "text-primary nav-link py-3 borderRi"
                     : "nav-link text-secondary py-3"
+                    
                 }
               >
                 <span className="ms-3 d-inline-block">{navi.title}</span>
