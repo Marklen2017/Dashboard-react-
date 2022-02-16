@@ -5,22 +5,18 @@ const navigation = [
   {
     title: "Search Query",
     href: "/search",
-    icon: "bi bi-hdd-stack",
   },
   {
     title: "Conversation lookup",
     href: "/conversation",
-    icon: "bi bi-columns",
   },
   {
     title: "User Lookup",
     href: "/user",
-    icon: "bi bi-layout-split",
   },
   {
     title: "Saved Query",
     href: "/saved",
-    icon: "bi bi-link",
   },
 ];
 
@@ -31,8 +27,8 @@ const Sidebar = () => {
   let location = useLocation();
 
   return (
-    <div className="p-3">
-      <div className="d-flex align-items-center">
+    <div className="p-3 main-menu ">
+      <div className="d-flex align-items-center area">
         <Button
           close
           size="sm"

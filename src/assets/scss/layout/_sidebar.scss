@@ -4,23 +4,64 @@
   background-color: $sidebarColor;
   position: relative;
   border-left: rgb(155 0 0);
-  box-shadow: 0px 0px 10px 0px!important;
+  box-shadow: 0px 0px 16px 2px rgba(111, 111, 111, 0.2)!important;
   .sidenav-bg:hover {
     background-color: $gray-100;
     border-radius: $border-radius;
   }
 }
 
+// .main-menu:hover,nav.main-menu.expanded {
+//   width:250px;
+//   overflow:visible;
+//   }
+  
+//   @media all and (max-width: 530px) {
+//   .main-menu {
+//   border-right:1px solid #e5e5e5;
+//   position:absolute;
+//   top:0;
+//   background-color: red;
+//   bottom:0;
+//   height:10%;
+//   left:0;
+//   width:100%;
+//   overflow:hidden;
+//   -webkit-transition:width .05s linear;
+//   transition:width .05s linear;
+//   -webkit-transform:translateZ(0) scale(1,1);
+//   z-index:1000;
+//   }
+// }
+  
+.btn-arrow {
+  display: none;
+}
 @include media-breakpoint-down(lg) {
   .sidebarArea {
     position: fixed;
     height: 100%;
-    overflow: auto;
+    // overflow: auto;
     z-index: 1;
-    margin-left: -$sidebarWidth;
+    // margin-left: -$sidebarWidth;
+    transform: translateX(-100%);
     transition: 0.2s ease-in;
     &.showSidebar {
       margin-left: 0px;
     }
   }
+  .btn-arrow {
+    display: block;
+    position: absolute;
+    width: 66px;
+    height: 20px;
+    top: 50%;
+    right: -25%;
+}
+}
+
+
+
+.sidebarActive {
+  transform: translateX(0);
 }
