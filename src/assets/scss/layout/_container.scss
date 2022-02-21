@@ -273,19 +273,12 @@ input {
 .ms-3 {
   font-size: 23px !important;
   color: #697184;
-
 }
-// .sidenav-bg {
-//   background-color: red!;
-// }
-// .nav-item {
-//   background-color: red!important;
-// }
+
 .flex-right {
   display: flex;
 }
 
-////
 .tweet-title {
   color: #697184;
 }
@@ -314,7 +307,6 @@ input {
   flex-direction: column;
   padding: 44px 0 0px 80px;
 }
-
 
 .btn-flex-tweet {
   display: flex;
@@ -401,7 +393,6 @@ input {
 //user lookup end
 
 .wrapper {
-  // max-width: 1300px;
   margin: 0 auto;
 }
 .card {
@@ -441,6 +432,87 @@ input {
   box-shadow: inset 0px 0px 20px rgb(111 111 111 / 20%);
 }
 
+//login
+
+.main {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #e5e5e5;
+}
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  max-width: 390px;
+  box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+  padding-top: 30px;
+  border-radius: 32px;
+  background-color: white;
+}
+.imgs {
+  padding-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.container-image {
+  background-color: rgb(223, 221, 221);
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 130px;
+}
+
+.input-login {
+  width: 300px;
+  height: 50px;
+  border-radius: 60px;
+  box-shadow: inset 0px 0px 25px 0px #888;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.email {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  padding: 14px 0 0 25px;
+}
+
+.input-login {
+  padding-left: 20px;
+  font-size: 20px;
+}
+.second-input {
+  padding-top: 20px;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  border-radius: 60px;
+  background-color: #a30000;
+  color: white;
+  font-size: 25px;
+  border: none;
+}
+.login-button {
+  padding-top: 25px;
+}
+
+//login end
+
 @media all and (max-width: 720px) {
   .tweet-checkbox-flex {
     padding: 0 10px;
@@ -466,7 +538,7 @@ input {
   .contentArea {
     flex-grow: 1;
     background-color: #e5e5e5;
-    width: 525px!important;
+    width: 525px !important;
   }
 }
 @media all and (max-width: 768px) {

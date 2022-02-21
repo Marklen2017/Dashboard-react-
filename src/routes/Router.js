@@ -9,16 +9,17 @@ const Search = lazy(() => import("../views/ui/Search"));
 const Conversation = lazy(() => import("../views/ui/Conversation"));
 const User = lazy(() => import("../views/ui/User"));
 const Saved = lazy(() => import("../views/ui/Saved"));
-
+const LoginUi = lazy(() => import("../views/ui/LoginUi"));
 
 const ThemeRoutes = [
   {
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/expansions", exact: true, element: <Expansions />} ,
-      { path: "/media", exact: true, element: <Media />} ,
-      { path: "/tweet", exact: true, element: <Tweet />} ,
+      { path: "/", exact: true, element: <LoginUi /> },
+      { path: "/expansions", exact: true, element: <Expansions /> },
+      { path: "/media", exact: true, element: <Media /> },
+      { path: "/tweet", exact: true, element: <Tweet /> },
       { path: "/search", exact: true, element: <Search /> },
       { path: "/conversation", exact: true, element: <Conversation /> },
       { path: "/user", exact: true, element: <User /> },

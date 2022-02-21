@@ -1,24 +1,34 @@
 import { Outlet } from "react-router-dom";
+// import { LoginUi } from "";
 import Sidebar from "./Sidebar";
 import { Container } from "reactstrap";
-import {useState} from "react"
-
+import { useState } from "react";
+import align from "../assets/images/align-left.png";
 
 const FullLayout = () => {
-  const [mobile,setMobile] = useState(false)
+  const [mobile, setMobile] = useState(false);
   const handlerMobile = () => {
-    setMobile(!mobile)
-  }
+    setMobile(!mobile);
+  };
+
   return (
     <main>
       <div className="pageWrapper d-lg-flex">
-        <aside className={mobile ? "sidebarArea shadow sidebarActive" :  "sidebarArea shadow"} id="sidebarArea" >
+        <aside
+          className={
+            mobile ? "sidebarArea shadow sidebarActive" : "sidebarArea shadow"
+          }
+          id="sidebarArea"
+        >
           <Sidebar />
-          <button className="btn-arrow" onClick={handlerMobile}>-></button>
+          <button className="btn-arrow" onClick={handlerMobile}>
+            <img src={align} />
+          </button>
         </aside>
 
         <div className="contentArea">
           <Container className="p-4 wrapper" fluid>
+            {/* <LoginUi /> */}
             <Outlet />
           </Container>
         </div>

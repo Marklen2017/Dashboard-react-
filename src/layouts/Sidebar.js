@@ -28,14 +28,6 @@ const Sidebar = () => {
 
   return (
     <div className="p-3 main-menu ">
-      <div className="d-flex align-items-center area">
-        <Button
-          close
-          size="sm"
-          className="ms-auto d-lg-none"
-          onClick={() => showMobilemenu()}
-        ></Button>
-      </div>
       <div className="pt-4 mt-2">
         <Nav vertical className="sidebarNav">
           {navigation.map((navi, index) => (
