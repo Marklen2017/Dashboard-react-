@@ -56,7 +56,7 @@ const Tweet = (props) => {
             </div>
             <br />
             <div className="btn-flex-tweet">
-                <button style={{ width: '126px', height: '48px', fontSize: '24px', margin: '0px 20px 0px 0px', border: '1px solid #A30000', backgroundColor: '#E5E5E5', color: '#A30000' }} onClick={() => navigate(-1)}>Back</button>
+                <button style={{ width: '126px', height: '48px', fontSize: '24px', margin: '0px 20px 0px 0px', border: '1px solid #A30000', borderRadius: '10px', backgroundColor: '#E5E5E5', color: '#A30000' }} onClick={() => navigate(-1)}>Back</button>
                 <button style={{ height: '48px' }} className="btn-next" onClick={() => navigate("/media")}><span>Next </span></button>
             </div>
 

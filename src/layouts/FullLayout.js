@@ -28,7 +28,6 @@ const FullLayout = () => {
 
         <div className="contentArea">
           <Container className="p-4 wrapper" fluid>
-            {/* <LoginUi /> */}
             <Outlet />
           </Container>
         </div>

@@ -164,6 +164,7 @@ const Expansions = (props) => {
             border: "1px solid #A30000",
             backgroundColor: "#E5E5E5",
             color: "#A30000",
+            borderRadius: '10px',
           }}
           onClick={() => navigate(-1)}
         >

@@ -1,7 +1,13 @@
 .pageWrapper {
   min-height: 100vh;
+  background: #E5E5E5;
+  width: 100%;
+  display: flex;
 }
 .contentArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
   background-color: #e5e5e5;
 }
@@ -40,7 +46,7 @@ textarea {
   padding: 0 2em 0 2em;
 }
 
-input {
+.input-login {
   height: 48px;
   max-width: 360px;
 }
@@ -98,7 +104,9 @@ input {
 .form-control {
   background-color: #e5e5e5;
   border: 1px solid gray;
+  max-width: 360px;
   border-radius: 10px;
+  height: 44px;
 }
 .max {
   padding: 10px 0 0 0;
@@ -186,7 +194,7 @@ input {
 .date-end {
   width: 360px;
   background-color: #e5e5e5;
-  // height: 38px;
+  height: 44px;
   padding: 0 0px 0 8px;
   border: 1px solid gray;
 }
@@ -434,82 +442,126 @@ input {
 
 //login
 
-.main {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-color: #e5e5e5;
-}
-.sub-main {
-  display: flex;
-  justify-content: center;
-  height: 400px;
+form {
+  max-width: 360px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 390px;
-  box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
-  padding-top: 30px;
-  border-radius: 32px;
-  background-color: white;
-}
-.imgs {
-  padding-top: 20px;
-  justify-content: center;
-  display: flex;
-}
-.container-image {
-  background-color: rgb(223, 221, 221);
-  border-radius: 150px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 115px;
-  width: 115px;
-}
-.profile {
-  height: 100px;
-  width: 100px;
-  border-radius: 130px;
 }
 
-.input-login {
-  width: 300px;
-  height: 50px;
-  border-radius: 60px;
-  box-shadow: inset 0px 0px 25px 0px #888;
-  border: none;
-  outline: none;
-  background-color: #fff;
+h1 {
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
 }
 
-.email {
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  padding: 14px 0 0 25px;
+.form {
+  background: #0e101c;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.input-login {
-  padding-left: 20px;
+.login-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: black;
   font-size: 20px;
+  font-weight: 200;
 }
-.second-input {
-  padding-top: 20px;
+
+button[type="submit"],
+.login-input[type="submit"] {
+  background: #A30000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+button[type="submit"]:hover,
+.login-input[type="submit"]:hover {
+  background: #af2f2f;
+}
+
+button[type="submit"]:active,
+.login-input[type="button"]:active,
+.login-input[type="submit"]:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+.login-input:disabled {
+  opacity: 0.4;
+}
+
+.login-input[type="button"]:hover {
+  transition: 0.3s all;
+}
+
+button[type="submit"],
+.login-input[type="button"],
+.login-input[type="submit"] {
+  -webkit-appearance: none;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form {
+  max-width: 360px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+button[type="button"] {
+  display: block;
+  appearance: none;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+pre {
+  color: white;
+}
+
+hr {
+  margin-top: 30px;
 }
 
 button {
-  width: 300px;
-  height: 50px;
-  border-radius: 60px;
-  background-color: #a30000;
-  color: white;
-  font-size: 25px;
-  border: none;
+  display: block;
+  appearance: none;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
-.login-button {
-  padding-top: 25px;
-}
+
 
 //login end
 
