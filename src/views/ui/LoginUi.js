@@ -1,46 +1,51 @@
 import { useForm } from "react-hook-form";
-import React, { useEffect, url } from "react";
+import {useState} from "react"
+import React from "react";
+import { useUserContext } from "../../context/user_context";
+
 
 export default function LoginUi() {
-//   const fetchData = async () => {
-//     try {
-//         const response = await fetch(url);
-//         const json = await response.json();
-//         console.log(json);
-// 		} catch (error) {
-//         console.log("error", error);
-// 		}
-// };
-//   useEffect(() => {
-//     const url = "https://api.adviceslip.com/advice";
+  
+  const [tokens, setTokens] = useState()
+  const {register,formState: { errors },handleSubmit,} = useForm();
+  const [errorForm, setErrorForm] = useState(false)
+  const {handlerShowSidebar} = useUserContext();
+  
+  const fetchData = async (data) => {
 
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(url);
-//         const json = await response.json();
-//         console.log(json);
-//       } catch (error) {
-//         console.log("error", error);
-//       }
-//     };
+    try {
+      const response = await  fetch("https://twitter-api-2406.herokuapp.com/auth/login/", {
+        body: JSON.stringify(data),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "X-Csrftoken": "taLOvDWaPQakSNX895bxm9UA8MwICT4H5Jp1SywlEezWdfhhO2I3OpKiV5yrnF4o"
+        },
+        method: "POST"
+      })
+      if (!response.ok) {// or check for response.status
+        throw new Error(response.statusText);
+      }
+      const json = await response.json();
+      setTokens(json)
+      handlerShowSidebar()
+      setErrorForm(false)
+      
+    } catch (error) {
+      setErrorForm(true)
+      console.log("error", error);
+    }
+  };
 
-//     fetchData();
-// }, []);
-
-  const {
-    register,
-
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    fetchData(data);
   };
   return (
     <div className="login-form">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
+        {errorForm ? <p style={{ color: 'red' }}>Invalid email or password</p> : null}
+        <div>
           Email
           <input
             className="login-input"
@@ -55,10 +60,10 @@ export default function LoginUi() {
             })}
           />
           <div>
-            {errors?.firstName && <p>{errors?.firstName.message || "Error"}</p>}
+            {errors?.firstName && <p>{errors?.email.message || "Error"}</p>}
           </div>
-        </label>
-        <label>
+        </div>
+        <div>
           Password
           <input
             className="login-input"
@@ -67,15 +72,15 @@ export default function LoginUi() {
               required: "Error Message",
 
               minLength: {
-                value: 6,
-                message: "Minimum 6 synbol",
+                value: 8,
+                message: "Minimum 8 synbol",
               },
             })}
           />
           <div style={{ height: 40 }}>
-            {errors?.lastName && <p>{errors?.lastName.message || "Error"}</p>}
+            {errors?.lastName && <p>{errors?.password.message || "Error"}</p>}
           </div>
-        </label>
+        </div>
 
         <input className="login-input" type="submit" value="Log In" />
       </form>
