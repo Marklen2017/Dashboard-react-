@@ -2,15 +2,15 @@ import { useForm } from "react-hook-form";
 import {useState} from "react"
 import React from "react";
 import { useUserContext } from "../../context/user_context";
-
+import { useNavigate } from "react-router-dom";
 
 export default function LoginUi() {
   
-  const [tokens, setTokens] = useState()
-  const {register,formState: { errors },handleSubmit,} = useForm();
+
+  const {register,formState: { errors }, handleSubmit,reset} = useForm();
   const [errorForm, setErrorForm] = useState(false)
   const {handlerShowSidebar} = useUserContext();
-  
+  const navigate =  useNavigate()
   const fetchData = async (data) => {
 
     try {
@@ -23,13 +23,16 @@ export default function LoginUi() {
         },
         method: "POST"
       })
-      if (!response.ok) {// or check for response.status
+      if (!response.ok) {
         throw new Error(response.statusText);
       }
       const json = await response.json();
-      setTokens(json)
-      handlerShowSidebar()
+      localStorage.setItem('user', JSON.stringify(json.tokens));
+      reset()
+      
       setErrorForm(false)
+      handlerShowSidebar()
+      navigate('/search')
       
     } catch (error) {
       setErrorForm(true)

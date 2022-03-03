@@ -1,31 +1,39 @@
-import { lazy } from "react";
+import React from "react";
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
+import LoginUi from "../views/ui/LoginUi";
+import Expansions from "../views/ui/Expansions";
+import Media from "../views/ui/Media";
+import Tweet from "../views/ui/Tweet";
+import Search from "../views/ui/Search";
+import Conversation from "../views/ui/Conversation";
+import User from "../views/ui/User";
 
-const Expansions = lazy(() => import("../views/ui/Expansions"));
-const Media = lazy(() => import("../views/ui/Media"));
-const Tweet = lazy(() => import("../views/ui/Tweet"));
-const Search = lazy(() => import("../views/ui/Search"));
-const Conversation = lazy(() => import("../views/ui/Conversation"));
-const User = lazy(() => import("../views/ui/User"));
-const Saved = lazy(() => import("../views/ui/Saved"));
-const LoginUi = lazy(() => import("../views/ui/LoginUi"));
+import Saved from "../views/ui/Saved";
 
-const ThemeRoutes = [
-  {
-    path: "/",
-    element: <FullLayout />,
-    children: [
-      { path: "/", exact: true, element: <LoginUi /> },
-      { path: "/expansions", exact: true, element: <Expansions /> },
-      { path: "/media", exact: true, element: <Media /> },
-      { path: "/tweet", exact: true, element: <Tweet /> },
-      { path: "/search", exact: true, element: <Search /> },
-      { path: "/conversation", exact: true, element: <Conversation /> },
-      { path: "/user", exact: true, element: <User /> },
-      { path: "/saved", exact: true, element: <Saved /> },
-    ],
-  },
-];
 
-export default ThemeRoutes;
+
+export default function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<LoginUi />}>
+          <Route path="/expansions" element={<Expansions />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/tweet" element={<Tweet />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/conversation" element={<Conversation />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/saved" element={<Saved />} />
+
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+ReactDOM.render(<Router />, document.getElementById("root"));
+
+

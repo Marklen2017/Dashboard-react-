@@ -30,7 +30,6 @@
   color: #697184 !important;
 }
 input,
-button,
 select,
 optgroup,
 textarea {
@@ -63,6 +62,16 @@ textarea {
   flex-direction: column;
   padding: 62px 0 0 0;
 }
+
+.button-logout {
+  background: #A30000;
+  border: none;
+  padding: 6px 20px;
+  color: white;
+  margin: 0 16px;
+  font-size: 18px;
+}
+
 /////@at-root
 .forms {
   padding: 30px;

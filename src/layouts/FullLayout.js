@@ -11,7 +11,6 @@ const FullLayout = () => {
   const handlerMobile = () => {
     setMobile(!mobile);
   };
-
   return (
     <main>
       <div className="pageWrapper d-lg-flex">

@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 
 const UserContext = React.createContext()
+
 export const UserProvider = ({ children }) => {
-  
-  const [showSidebar, setShowSidebar] = useState(false);
+  const userLogin = localStorage.getItem("user");
+  const [showSidebar, setShowSidebar] = useState(!!userLogin);
   const handlerShowSidebar = () => {
     setShowSidebar(!showSidebar)
   }
