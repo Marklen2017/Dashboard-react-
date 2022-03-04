@@ -1,6 +1,6 @@
 .pageWrapper {
   min-height: 100vh;
-  background: #E5E5E5;
+  background: #e5e5e5;
   width: 100%;
   display: flex;
 }
@@ -64,12 +64,15 @@ textarea {
 }
 
 .button-logout {
-  background: #A30000;
+  background: #a30000;
   border: none;
   padding: 6px 20px;
   color: white;
   margin: 0 16px;
   font-size: 18px;
+}
+.btn-logout {
+  padding: 10px 0;
 }
 
 /////@at-root
@@ -495,7 +498,7 @@ label {
 
 button[type="submit"],
 .login-input[type="submit"] {
-  background: #A30000;
+  background: #a30000;
   color: white;
   border: none;
   border-radius: 10px;
@@ -541,8 +544,8 @@ button[type="submit"],
 }
 .login-form {
   max-width: 360px;
-    margin: 0 auto;
-    width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 button[type="button"] {
@@ -570,7 +573,6 @@ button {
   margin-bottom: 20px;
   border-radius: 4px;
 }
-
 
 //login end
 

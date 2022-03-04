@@ -1,6 +1,3 @@
-// import { useRoutes } from "react-router-dom";
-// import Themeroutes from "./routes/Router";
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -14,22 +11,75 @@ import User from "./views/ui/User";
 import FullLayout from "./layouts/FullLayout";
 import { Navigate } from "react-router-dom";
 import Saved from "./views/ui/Saved";
+import ProtectedRoute from "./views/ui/ProtectedRoute";
+import { useUserContext } from "./context/user_context";
 
 const App = () => {
   const userLogin = localStorage.getItem("user");
-  return (
-  <Routes>
-      <Route path="/" element={<FullLayout />}>
-        <Route index  element={ userLogin ?  <Navigate  to='/search'/> : <LoginUi />} />
-        <Route path="/expansions" element={<Expansions />} />
-        <Route path="/media" element={<Media />} />
-        <Route path="/tweet" element={<Tweet />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/conversation" element={<Conversation />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/saved" element={<Saved />} />
-      </Route>
-</Routes>);
+  const { userSuccess } = useUserContext();
 
+  return (
+    <Routes>
+      <Route path="/" element={<FullLayout />}>
+        <Route index element={<LoginUi />} />
+        <Route
+          path="/search"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Search />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/expansions"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Expansions />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/media"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Media />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/tweet"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Tweet />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/conversation"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Conversation />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <User />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/saved"
+          element={
+            <ProtectedRoute user={userLogin}>
+              <Saved />
+            </ProtectedRoute>
+          }
+        />
+      </Route>
+    </Routes>
+  );
 };
 export default App;

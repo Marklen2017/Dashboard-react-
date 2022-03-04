@@ -1,5 +1,5 @@
 import { Nav, NavItem } from "reactstrap";
-import { Link, useLocation, useNavigate  } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/user_context";
 const navigation = [
   {
@@ -24,13 +24,13 @@ const Sidebar = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
-  const {handlerShowSidebar} = useUserContext();
+  const { handlerShowSidebar } = useUserContext();
   let location = useLocation();
   const navigate = useNavigate();
   const logout = function () {
     localStorage.clear();
-    navigate('/', { replace: false })
-    handlerShowSidebar(false)
+    handlerShowSidebar(false);
+    navigate("/", { replace: false });
   };
   return (
     <div className="p-3 main-menu ">
@@ -50,8 +50,10 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          <div className="xzc">
-            <button className="button-logout" onClick={logout}>Log Out</button>
+          <div className="btn-logout">
+            <button className="button-logout" onClick={logout}>
+              Log Out
+            </button>
           </div>
         </Nav>
       </div>
