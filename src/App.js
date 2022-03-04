@@ -17,11 +17,15 @@ import { useUserContext } from "./context/user_context";
 const App = () => {
   const userLogin = localStorage.getItem("user");
   const { userSuccess } = useUserContext();
+  console.log(userSuccess);
 
   return (
     <Routes>
       <Route path="/" element={<FullLayout />}>
-        <Route index element={<LoginUi />} />
+        <Route
+          index
+          element={userSuccess ? <Navigate to="/search" /> : <LoginUi />}
+        />
         <Route
           path="/search"
           element={

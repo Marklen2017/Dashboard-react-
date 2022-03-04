@@ -2,10 +2,16 @@ import React, { useContext, useState } from "react";
 
 const UserContext = React.createContext();
 
+function checkLocal() {
+  if (localStorage.getItem("user")) {
+    return true;
+  } else {
+    return false;
+  }
+}
 export const UserProvider = ({ children }) => {
-  // const userLogin = localStorage.getItem("user");
-  const [showSidebar, setShowSidebar] = useState(false);
-  const [userSuccess, setUserSuccess] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(checkLocal());
+  const [userSuccess, setUserSuccess] = useState(checkLocal());
   const handlerShowSidebar = (el) => {
     setUserSuccess(el);
     setShowSidebar(el);

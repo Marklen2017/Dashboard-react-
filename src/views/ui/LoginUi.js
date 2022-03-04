@@ -53,7 +53,6 @@ export default function LoginUi() {
     fetchData(data);
   };
   return (
-    
     <Suspense fallback={<Loader />}>
       <div className="login-form">
         <form onSubmit={handleSubmit(onSubmit)}>
