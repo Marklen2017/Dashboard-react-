@@ -17,7 +17,7 @@ const Tweet = (props) => {
                 </div>
                 <div className="tweet-checkbox-flex">
                     <div className="label">author_id
-                        <div className="tweet1-no-flex"><div className="no-check">No</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox" /></div>
+                        <div className="tweet1-no-flex"><div className="no-check">No</div><input style={{ height: '28px' }} className="input-checkbox" type="checkbox"  /></div>
                         <div className="text-check">Default is to Request All of these.<br /> Check ‘No’ to not  request this object</div>
                     </div>
                     <div className="label-1">conversation_id

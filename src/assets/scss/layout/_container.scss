@@ -74,6 +74,27 @@ textarea {
 .btn-logout {
   padding: 10px 0;
 }
+.search-form {
+  max-width: 750px;
+  width: 100%;
+  margin: 0;
+}
+.react-datepicker__navigation-icon {
+  position: relative;
+  top: -1px;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+}
+.react-datepicker__navigation {
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  z-index: 1;
+  width: 60px;
+}
 
 /////@at-root
 .forms {
@@ -577,10 +598,6 @@ button {
 //login end
 
 @media all and (max-width: 720px) {
-  .tweet-checkbox-flex {
-    padding: 0 10px;
-  }
-
   .tweet1-no-flex {
     display: flex;
     flex-direction: column;
@@ -597,6 +614,7 @@ button {
     padding: 0;
   }
 }
+
 @media all and (max-width: 425px) {
   .contentArea {
     flex-grow: 1;
@@ -604,7 +622,7 @@ button {
     width: 525px !important;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1310px) {
   .tweet-checkbox-flex {
     display: flex;
     flex-direction: column;
